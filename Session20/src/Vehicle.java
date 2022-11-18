@@ -1,0 +1,46 @@
+public class Vehicle
+{
+  private String owner;
+  private double price;
+
+  public Vehicle(String owner, double price)
+  {
+    this.owner = owner;
+    this.price = price;
+  }
+
+  public String getOwner()
+  {
+    return owner;
+  }
+
+  public void setOwner()
+  {
+    this.owner = owner;
+  }
+
+  public double getPrice()
+  {
+    return price;
+  }
+
+  public void setPrice()
+  {
+    this.price = price;
+  }
+
+  public String toString()
+  {
+    return "OWNER:" + owner + "\n" + "PRICE:" + price;
+  }
+
+  public boolean equals(Object obj)
+  {
+    if (obj == null || getClass() != obj.getClass())
+    {
+      return false;
+    }
+    Vehicle other = (Vehicle) obj;
+    return owner.equals(other.owner) && price== other.price;
+  }
+}
